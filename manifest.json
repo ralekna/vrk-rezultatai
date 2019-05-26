@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "VRK rezultatų lentelė",
+  "version": "1.0.1",
+
+  "description": "Prideda galimybę rikiuoti rezultatus VRK puslapyje",
+
+  "icons": {
+    "36": "icons/baseline_sort_black_18dp.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.vrk.lt/*"],
+      "js": ["libs/js/jquery.min.js", "libs/js/jquery.tablesorter.combined.min.js", "src/index.js"],
+      "css": ["libs/css/theme.default.min.css"]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "vrk-rezultatai@alekna.info"
+    }
+  }
+}
